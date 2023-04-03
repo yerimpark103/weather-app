@@ -18,7 +18,7 @@ WebGL로 그래픽 작업을 하여 zenful함을 곁들이려고 하고 있습�
 
 - [WeatherAPI](https://api.weatherapi.com/v1/)
 
-## 설치 및 실행방법
+### 설치 및 실행방법
 
 ```bash
 yarn install
