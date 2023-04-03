@@ -1,3 +1,1 @@
-export interface Weather {
-  [key: string]: any;
-}
+export type Weather = Record<string, any>;

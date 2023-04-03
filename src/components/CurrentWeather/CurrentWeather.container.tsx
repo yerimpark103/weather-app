@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import CurrentWeatherUI from "./CurrentWeather.presenter";
 import {Weather} from "./CurrentWeather.types";
 
-const url_base = "https://api.weatherapi.com/v1/";
+const urlBase = "https://api.weatherapi.com/v1/";
 
 export default function CurrentWeather() {
   const [lat, setLat] = useState(null);
@@ -28,7 +28,8 @@ export default function CurrentWeather() {
     setLat(position?.coords.latitude);
     setLon(position?.coords.longitude);
     const data = await axios.get(
-      `${url_base}current.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_API_KEY}&q=${lat},${lon}&aqi=no&lang=ko`
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+      `${urlBase}current.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_API_KEY}&q=${lat},${lon}&aqi=no&lang=ko`
     );
     setWeather(data.data.current);
     console.log(weather);
